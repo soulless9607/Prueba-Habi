@@ -1,0 +1,13 @@
+{
+    "properties": [
+        {
+            "id": 1,
+            "address": "Calle 123 #45-67",
+            "city": "Bogotá",
+            "price": 350000000,
+            "description": "Apartamento moderno en zona norte",
+            "year": 2020,
+            "status": "en_venta"
+        }
+    ]
+}
