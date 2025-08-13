@@ -1,9 +1,9 @@
 import unittest
 from unittest.mock import MagicMock, patch
-from ..app.repositories.property_repository import PropertyRepository
-from ..app.database.connection import DatabaseConnection
-from ..app.core.config import DatabaseConfig
-from ..app.core.exceptions import DatabaseError
+from app.repositories.property_repository import PropertyRepository
+from app.database.connection import DatabaseConnection
+from app.core.config import DatabaseConfig
+from app.core.exceptions import DatabaseError
 
 class TestPropertyRepository(unittest.TestCase):
     def setUp(self):

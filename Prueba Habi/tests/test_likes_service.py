@@ -1,8 +1,8 @@
 import unittest
 from unittest.mock import MagicMock, patch
-from ..app.services.likes_service import LikesService
-from ..app.repositories.likes_repository import LikesRepository
-from ..app.core.exceptions import ValidationError, DatabaseError
+from app.services.likes_service import LikesService
+from app.repositories.likes_repository import LikesRepository
+from app.core.exceptions import ValidationError, DatabaseError
 
 class TestLikesService(unittest.TestCase):
     def setUp(self):

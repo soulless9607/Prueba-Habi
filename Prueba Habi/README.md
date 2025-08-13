@@ -157,8 +157,36 @@ pip install -r requirements.txt
 python main.py
 ```
 
-### Running Tests
 
-```bash
-pytest tests/
+### Conceptual Implementation for Likes Service
+
+#### Entity-Relationship (ER) Diagram Extension
+
+To support the "Me gusta" (likes) feature, a new table is needed to record which users like which properties. The table should store:
+- The user who liked
+- The property liked
+- The timestamp of the like
+
+#### SQL to Create the Table
+
+```sql
+CREATE TABLE property_likes (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
+    property_id INT NOT NULL,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES user(id),
+    FOREIGN KEY (property_id) REFERENCES property(id)
+);
 ```
+
+#### ER Diagram Description
+
+- **User** (existing table): Stores user information.
+- **Property** (existing table): Stores property information.
+- **Property_Likes** (new table): Stores likes, with foreign keys to both user and property.
+
+**Why this design?**
+- Each like is linked to a user and a property.
+- You can track when each like was made.
+- The table supports multiple likes per user and property.

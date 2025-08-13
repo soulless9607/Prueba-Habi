@@ -1,7 +1,7 @@
 from typing import List, Dict, Optional
 import logging
-from app.repositories.property_repository import PropertyRepository
-from app.models.property import PropertyResponse
+from ..repositories.property_repository import PropertyRepository
+from ..models.property import PropertyResponse
 
 logger = logging.getLogger(__name__)
 
@@ -9,7 +9,7 @@ class PropertyService:
     def __init__(self, repository: PropertyRepository):
         self.repository = repository
     
-    async def get_filtered_properties(
+    def get_properties(
         self,
         year: Optional[int] = None,
         city: Optional[str] = None,

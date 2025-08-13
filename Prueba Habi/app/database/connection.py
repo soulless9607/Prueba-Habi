@@ -19,7 +19,7 @@ class DatabaseConnection:
                 port=self.config.port,
                 user=self.config.user,
                 password=self.config.password,
-                schema=self.config.schema
+                database=self.config.database
             )
         except mysql.connector.Error as e:
             logger.error(f"Error connecting to database: {e}")

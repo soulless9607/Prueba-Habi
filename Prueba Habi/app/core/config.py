@@ -7,7 +7,7 @@ class DatabaseConfig:
     port: int = 3309
     user: str = "pruebas"
     password: str = "VGbt3Day5R"
-    schema: str = "habi_db"
+    database: str = "habi_db"
 
 @dataclass
 class AppConfig:
