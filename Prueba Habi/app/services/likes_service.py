@@ -1,6 +1,7 @@
 from typing import List, Dict
 import logging
 from ..repositories.likes_repository import LikesRepository
+from ..core.exceptions import ValidationError, DatabaseError
 
 logger = logging.getLogger(__name__)
 
